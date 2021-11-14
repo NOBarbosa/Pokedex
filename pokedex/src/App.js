@@ -1,11 +1,14 @@
 import { useState, useEffect} from 'react';
 import './App.css';
 import Pokecard from './components/Pokecard';
+import UniqueCard from './components/UniqueCard';
+
 
 
 
 function App() {
   const [pokemon, setPokemon] = useState([]);
+  const [searchPokemon, setSearchPokemon] = useState('')
   
   useEffect(()=>{
     getPokemon();
@@ -29,9 +32,28 @@ function App() {
     
     <div className="App">
       <h1>Pokedex</h1>
-     
+      <input 
+        type='search'
+        placeholder='Search pokemon'
+        value={searchPokemon}
+        onChange={(e) => {setSearchPokemon(e.target.value)}}
+      />
+      
       <div className='poke-container'>
-          {pokemon.map((p, index)=>{
+          {pokemon.filter((p)=>{
+              if(searchPokemon === ''){
+                return p
+              }else if(p.name.toLowerCase().includes(searchPokemon.toLowerCase())){
+                return (
+                  <UniqueCard 
+                  name={p.name}
+                  id={p.id}
+                  image={p. sprites.front_default}
+                  type={p.types[0].type.name}
+                  />
+                )
+              }
+          }).map((p, index)=>{
             return (
               <Pokecard 
                 key={index}

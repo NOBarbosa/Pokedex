@@ -6,7 +6,7 @@ import React from 'react';
 import useStyles from './style';
 
 
-export default function Pokecard({name, id, type, image}) {
+export default function UniqueCard({name, id, type, image}) {
   const classes = useStyles();
   let color = ''
     if(type === 'grass'){
@@ -80,5 +80,3 @@ export default function Pokecard({name, id, type, image}) {
     </Card>
   );
 }
-
-
