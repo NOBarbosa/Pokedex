@@ -14,7 +14,8 @@ export default makeStyles((theme) => ({
             .rotate(-12)
             .darken(0.2)
             .fade(0.5)}`,
-        },      
+        },
+        fontFamily:'Press Start 2P'      
     },
     media: {
       height: 'auto',

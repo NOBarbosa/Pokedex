@@ -1,6 +1,7 @@
-/* body {
-  background-color: hsla(50, 91%, 61%, 0.836);
-} */
+body {
+  background: #f5f5f5da;
+  font-family: "Press Start 2P", cursive;
+}
 .App {
   display: flex;
   flex-direction: column;
@@ -10,8 +11,19 @@
 
 h1 {
   font-family: "Press Start 2P", cursive;
-  font-size: 57px;
+  font-size: 65px;
   color: #120136;
+}
+
+.input {
+  all: unset;
+  font-family: "Press Start 2P", cursive;
+  width: 300px;
+  height: 25px;
+  margin: 15px;
+  padding: 15px;
+  border: 1px solid #120136;
+  border-radius: 20px;
 }
 
 .poke-container {

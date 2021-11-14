@@ -1,14 +1,13 @@
-import { useState, useEffect} from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 import Pokecard from './components/Pokecard';
 import UniqueCard from './components/UniqueCard';
 
 
 
-
 function App() {
   const [pokemon, setPokemon] = useState([]);
-  const [searchPokemon, setSearchPokemon] = useState('')
+  const [searchPokemon, setSearchPokemon] = useState('');
   
   useEffect(()=>{
     getPokemon();
@@ -25,7 +24,6 @@ function App() {
   const getPokemonData =  async(id)=>{
     const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
     return res.json();  
-     
   }
  
   return (
@@ -33,6 +31,7 @@ function App() {
     <div className="App">
       <h1>Pokedex</h1>
       <input 
+        className='input'
         type='search'
         placeholder='Search pokemon'
         value={searchPokemon}
