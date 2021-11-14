@@ -29,7 +29,7 @@ function App() {
     
     <div className="App">
       <h1>Pokedex</h1>
-     {console.log(pokemon)}
+     
       <div className='poke-container'>
           {pokemon.map((p, index)=>{
             return (
