@@ -15,10 +15,7 @@ h1 {
   gap: 5px;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  align-content: flex-start;
+  width: 70%;
   height: calc(100vh - 75px);
-}
-.list {
-  font-family: "Press Start 2P", cursive;
-  color: black;
 }

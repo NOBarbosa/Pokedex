@@ -21,14 +21,6 @@ function App() {
 
   const getPokemonData =  async(id)=>{
     const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
-    // const {name, sprites:{other}, id:idpokemon, abilities, types:[type]} = await res.json();
-    //   const {dream_world:{front_default}} = other;      
-    //   const currentPokemon = [{
-    //       name,
-    //       idpokemon:idpokemon,
-    //       image: front_default,
-    //       ty: type.type.name
-    //   }]
     return res.json();  
      
   }
@@ -37,14 +29,14 @@ function App() {
     
     <div className="App">
       <h1>Pokedex</h1>
-      {console.log(pokemon)}
+     
       <div className='poke-container'>
           {pokemon.map((p, index)=>{
             return (
               <Pokecard 
                 key={index}
                 name={p.name}
-                id={p.idpokemon}
+                id={p.id}
                 image={p. sprites.front_default}
                 type={p.types[0].type.name}
                 
