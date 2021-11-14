@@ -1,3 +1,6 @@
+/* body {
+  background-color: hsla(50, 91%, 61%, 0.836);
+} */
 .App {
   display: flex;
   flex-direction: column;
@@ -8,15 +11,16 @@
 h1 {
   font-family: "Press Start 2P", cursive;
   font-size: 57px;
+  color: #120136;
 }
 
 .poke-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 5px;
+  gap: 10px;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   align-content: flex-start;
-  width: 70%;
+  width: 100%;
   height: calc(100vh - 75px);
 }

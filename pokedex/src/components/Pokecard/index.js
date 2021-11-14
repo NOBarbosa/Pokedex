@@ -1,34 +1,10 @@
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
-import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-import Color from 'color';
 import React from 'react';
+import useStyles from './style';
 
-
-const useStyles = makeStyles((theme) => ({
-    
-  root: {
-    width: 300,
-    display: 'flex',
-    flexDirection: 'column',
-    textAlign: 'center',
-    cursor: 'pointer',
-    '&:hover': {
-        boxShadow: `0 6px 12px 0 ${Color(`gray`)
-          .rotate(-12)
-          .darken(0.2)
-          .fade(0.5)}`,
-      },      
-  },
-  media: {
-    height: 'auto',
-    paddingTop: '65.25%', // 16:9
-    paddingBottom: '30.25%'
-  }
-  
-  }));
 
 export default function Pokecard({name, id, type, image}) {
   const classes = useStyles();
@@ -80,11 +56,10 @@ export default function Pokecard({name, id, type, image}) {
         color = '#3218d9'
     }
     
-    
   return (
     <Card className={classes.root} style={{backgroundColor: color}}>
-        <Typography>
-          <strong>
+        <Typography   variant="h6" >
+          <strong className={classes.typograph}>
             #0{id}
           </strong>
         </Typography>
@@ -94,7 +69,7 @@ export default function Pokecard({name, id, type, image}) {
         title={type}
       />
       <CardContent>
-        <Typography variant="body2" component="p"
+        <Typography variant="h6" component="p"
         >
             <strong>
                 Name: {name} <br></br>
@@ -102,8 +77,6 @@ export default function Pokecard({name, id, type, image}) {
             </strong>
         </Typography>
       </CardContent>
-      
-      
     </Card>
   );
 }
