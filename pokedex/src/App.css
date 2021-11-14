@@ -1,3 +1,24 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 h1 {
   font-family: "Press Start 2P", cursive;
+}
+
+.poke-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: calc(100vh - 75px);
+}
+.list {
+  font-family: "Press Start 2P", cursive;
+  color: black;
 }
