@@ -15,7 +15,7 @@ HTML, CSS, JavaScript, ReactJs, Material-Ui, PokéAPI
    Dentro do nosso componente pai, também encontraremos um h1, um Input e, uma div que receberá a informação dos nossos pokemons e, o nosso Card. 
    
    
-   ###PokeCard
+   ### PokeCard
    
    Nosso Card foi criado utilizando o Material-Ui. Bastou importar o componente de https://v4.mui.com/pt/components/cards/#card, remover as informações que não seriam utilizadas e, adicionar novas propriedades ao nosso styles.
    Para popular o Card, usamos props que foram passadas a partir do componente pai.
